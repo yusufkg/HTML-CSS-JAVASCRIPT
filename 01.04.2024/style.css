@@ -1,0 +1,44 @@
+#golge{
+    text-shadow: 5px 10px 5px;
+}
+
+#boxgolge{
+    width: 300px; 
+    padding: 20px; 
+    background-color: #ffffff; 
+    box-shadow: 5px 5px 10px #888888;
+}
+
+#metin{
+    display: flex; 
+    justify-content: space-between;
+}
+
+.metin1{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+#metin1{
+    display: flex; 
+    justify-content: space-between;
+}
+
+.metin2{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+hr{
+    width: 2px;
+    background-color: green;
+}
+
+#flower{
+    background-color: bisque;
+    background-position: right bottom,left bottom;
+    background-image: url(sincap.jpg),url(pembe-kagit-cicek.jpg);
+    background-repeat: no-repeat,repeat;
+}

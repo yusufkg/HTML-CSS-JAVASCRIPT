@@ -3,255 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2</title>
+    <title>Document</title>
+    <style>
+        label{
+            color:red; font-weight: bold; font-size: x-large;
+        }
+
+        .etiketBlack{
+            color:black;font-size: 16px; font-weight: normal;
+        }
+
+        #etiket1{
+            color:rgb(56, 177, 130);font-size: 16px; font-weight: normal;
+        }
+
+        /* table{
+            border: 1px solid black;
+            background-color: burlywood;
+        }
+
+        td{
+            background-color: aqua;
+        } */
+
+        table#tablo{
+            background-color: aqua;
+            border: 5px solid rebeccapurple;
+        }
+
+        table#tablo table{
+            background-color: aqua;
+            border: 3px solid rgb(119, 113, 24);
+        }
+        
+        div#container{
+            border:5px solid cadetblue;
+            background-color: cornflowerblue;
+            width: 400px;
+            height: 300px;
+        }
+
+        div#container p{
+            color:antiquewhite;
+            font-size: 18px;
+        }
+
+        div#container > p{
+            border:1px solid black;
+        }
+
+        div#container > div#firstChild > p{
+            color:red;
+        }
+
+    </style>
 </head>
 <body>
-    <!-- görev1 -->
-    <table border="2">
-        <thead>
-            <tr>
-                <td>A</td>
-                <td>B</td>
+    <div id="container">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div id="firstChild">
+            <p>test</p>
+            <div id="firstChildFirstChild">
+                <p>test</p>
+            </div>
 
-            </tr>
-            <tr>
-                <td>C</td>
-                <td>D</td>
-
-            </tr>
-            <td colspan="2">E</td>
-        </thead>
-    </table>
-<br>
-    <table border="2">
-        <thead>
-            <tr>
-                <td rowspan="2" >A</td>
-                <td>B</td>
-
-            </tr>
-            <tr>
-                <td>C</td>
-            </tr>
-        </thead>
-    </table>
-<br>
-    <table border="2">
-        <thead>
-            <tr>
-                <td >A</td>
-                <td>B</td>
-                <td>C</td>
-            </tr>
-        <tr>
-            <td rowspan="2">D</td>
-            <td>E</td>
-            <td>F</td>
-        </tr>
-        <tr>
-            <td>G</td>
-            <td>I</td>
-
-        </tr>
-    
-        </thead>
-    </table>
+            <p>test</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
     <br>
-    <table border="2">
-        <thead>
-            <tr>
-                <td colspan="2">AD SOYAD</td>
-                <td>PUAN</td>
-            </tr>
-        <tr>
-            <td >DAVID</td>
-            <td>ROBINSON</td>
-            <td>50</td>
-        </tr>
-        <tr>
-            <td >TONY</td>
-            <td>PARKER</td>
-            <td>89</td>
-        </tr>
-        <tr>
-            <td >RAY</td>
-            <td>ALLEN</td>
-            <td>55</td>
-        </tr>
-    
-        </thead>
-    </table>
-    <br>
-    <table border="2">
-       
-            <tr>
-                <td colspan="2">AD SOYAD</td>
-                <td>SINIF</td>
-                <td>OKUL</td>
-            </tr>
-        <tr>
-            <td rowspan="2">ALİ</td>
-            <td rowspan="2">KARA</td>
-            <td >7</td>
-            <td rowspan="2">OKUL A</td>
-        </tr>
-        <tr><td>C</td></tr>
+    <form action="http://localhost/form/kayit.php" method="post">
+        <table id="tablo">
+            <tbody>
+                <tr>
+                    <td><label for="adi">Adı</label></td>
+                    <td><input type="text" name="adi" id="adi"/></td>
+                </tr>
+                <tr>
+                    <td><label for="soyadi">Soyadı</label></td>
+                    <td><input type="text" name="soyadi" id="soyadi" /></td>
+                </tr>
+                <tr>
+                    <td><label for="dtarihi">Doğum Tarihi</label</td>
+                    <td><input type="date" name="dtarihi" id="dtarihi" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="cinsiyetE">Cinsiyet</label></td>
+                    <td>
+                        <label for="cinsiyetE" style="color:black;font-size: 16px; font-weight: normal;">Erkek </label>
+                        <input type="radio" name="cinsiyet" id="cinsiyetE" value="E" checked />
+                        <label for="cinsiyetK" class="etiketBlack" id="etiket1" style="color:black;font-size: 16px; font-weight: normal;">Kadın</label>
+                        <input type="radio" name="cinsiyet" id="cinsiyetK"value="K" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="cinsiyetE">Dersler</label></td>
+                    <td>
+                        <table style="background-color: azure;">
+                            <tr>
+                                <td><label for="dersMatematik"
+                                    class="etiketBlack">Matematik</label></td>
+                                <td><input type="checkbox" name="dersler[]" id="dersMatematik" value="matematik"> </td>
+                            </tr>
+                            <tr>
+                                <td><label for="dersFizik" class="etiketBlack">Fizik</label></td>
+                                <td><input type="checkbox" name="dersler[]" id="dersFizik" value="fizik"> </td>
+                            </tr>
+                            <tr>
+                                <td><label for="dersKimya" class="etiketBlack">Kimya</label></td>
+                                <td><input type="checkbox" name="dersler[]" id="dersKimya" value="kimya"> </td>
+                            </tr>
+                            <tr>
+                                <td><label for="dersAstronomi" class="etiketBlack">Astronomi</label></td>
+                                <td><input type="checkbox" name="dersler[]" id="dersAstronomi" value="astronomi"> </td>
+                            </tr>
 
-        <tr>
-            <td rowspan="2">AYŞE</td>
-            <td rowspan="2">YILDIZ</td>
-            <td>8</td>
-            <td rowspan="2">OKUL B</td>
-         
-        </tr>
-        <tr><td>B</td></tr>
-
-        <tr>
-            <td rowspan="2">SUNA</td>
-            <td rowspan="2">YILMAZ</td>
-            <td>8</td>
-            <td rowspan="2">OKUL B</td>
-         
-        </tr>
-        <tr><td>B</td></tr>
-    </table>
-<br>
-    <table border="2">
-       
-        <tr>
-            <td colspan="2">AD SOYAD</td>
-            <td>SINIF</td>
-            <td>OKUL</td>
-        </tr>
-    <tr>
-        <td rowspan="2">ALİ</td>
-        <td rowspan="2">KARA</td>
-    </tr>
-    <tr>
-        <td rowspan="2">AYŞE</td>
-        <td rowspan="2">YILDIZ</td>
-     
-    </tr>
-    <tr>
-        <td rowspan="2">SUNA</td>
-        <td rowspan="2">YILMAZ</td>
- 
-    </tr>
-
-</table>
-
-<br>
-
-<table border="2""">
-       
-    <tr>
-        <td>A</td>
-        <td>B</td>
-        <td>C</td>
-        <td>D</td>
-        </tr>
-<tr>
-    <td>E</td>
-    <td rowspan="2" colspan="2">F</td>
-    <td>G</td>
- 
-</tr>
-
-<tr>
-    <td>H</td>
-    <td>I</td>
-</tr>
-<tr>
-    
-    <td>J</td>
-    <td>K</td>
-    <td>L</td>
-    <td>M</td>
-</tr>
-</table>
-<br>
-<form action="/action_page.php">
-    <fieldset>
-      <legend>Bilgiler:</legend>
-      <label for="fname">Ad:</label>
-      <br>
-      <input type="text" id="fname" name="fname"><br>
-      <label for="lname">Surname:</label>
-      <br>
-      <input type="text" id="lname" name="lname"><br><br>
-      <label for="">Password:</label>
-      <br>
-      <input type="password" id="lname" name="lname"><br><br>
-      <input type="color" value="#ffffff" id="lname" name="lname"><br><br>
-      <label for="">file</label>
-      <input type="file" value="#ffffff" id="lname" name="lname"><br><br>
-      <input type="number" value="#ffffff" id="lname" name="lname"><br><br>
-      <input type="number" min="10" max="100" step="10" value="#ffffff" id="lname" name="lname"><br><br>
-      <input type="time" min="10" max="100" step="10" value="#ffffff" id="lname" name="lname"><br><br>
-
-      <button type="button">Kayıt Ol</button>
-  
-    </fieldset>
-  </form>
-<br></br>
-  <form action="/action_page.php" >
-    <fieldset>
-      <legend>İŞ BAŞVURU FORMU:</legend>
-      <label for="fname">Ad:</label>
-      <br>
-      <input type="text" id="fname" name="fname"><br>
-      
-      <label for="lname">Soyad:</label>
-      <br>
-      <input type="text" id="lname" name="lname"><br><br>
-      Kadın:
-      <input type="radio" id="html" name="fav_language" value="HTML">
-      Erkek:
-      <input type="radio" id="html" name="fav_language" value="HTML">
-      <br>
-      <br>
-      E-mail:
-      <input type="email" id="html" name="fav_language">
-      Telefon:
-      <input type="tel" id="html" name="fav_language">
-      <br><br>
-      Adres:
-      <textarea rows="10" cols="40" id="html" name="fav_language"> </textarea>
-    
-      <br>
-      <br>
-      <label for="">CV</label>
-      <input type="file" value="#ffffff" id="lname" name="lname"><br><br>
-
-      
-     <label for="">Önyazı</label>
-     <br>
-      <textarea rows="10" cols="40" id="html" name="fav_language"> </textarea>
-      <table >
-        <br>
-        <tr>
-            <td>Eğitim durumunuz</td>
-        </tr>
-        <br>
-        <tr>
-            <label for="">ilkoluk</label>
-            <input type="radio" id="html" name="fav_language" value="HTML">
-            <label for="">lise</label>
-            <input type="radio" id="html" name="fav_language" value="HTML">
-            <label for="">üniversite</label>
-            <input type="radio" id="html" name="fav_language" value="HTML">
-            <label for="">Yükseklisans</label> 
-            <input type="radio" id="html" name="fav_language" value="HTML">
-  
-        </tr>
-      </table>
-      <br>
-        <br>
-      <button type="button">Kayıt Ol</button>
-  
-    </fieldset>
-  </form>
-
-
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Kaydet" />
+                        <input type="reset" value="Temizle" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
 </body>
 </html>
