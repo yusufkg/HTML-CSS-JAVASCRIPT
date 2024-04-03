@@ -1,0 +1,42 @@
+.container{
+    width: 70%;
+    height: 300px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.menu-item{
+    width: 100%;
+    height: auto;
+    border: 2px solid cadetblue;
+    padding: 2px;
+    background-color: burlywood;
+}
+
+.urun-item{
+    border: 1px solid blueviolet;
+    padding: 2px;
+    background-color: coral;
+    color:white;
+    font-weight: bold;
+}
+
+.miktar-item{
+    border: 1px solid rgb(106, 196, 136);
+    padding: 2px;
+    background-color: rgb(178, 219, 66);
+    color:white;
+    font-weight: bold;
+}
+
+.action{
+    width: 70%;
+    height: auto;
+    border: 1px solid black;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}

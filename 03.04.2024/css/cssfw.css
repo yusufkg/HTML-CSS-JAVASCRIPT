@@ -1,0 +1,50 @@
+:root{
+    --red :#ab2612;
+    --blue:#1266ab;
+    --yellow:#ab9e12;
+    --green:#47ab12;
+    --orange:#ab5912;
+}
+
+.heading-1{
+    font-size: 40px;
+    font-weight: 600;
+}
+.heading-2{
+    font-size: 30px;
+    font-weight: 500;
+}
+.heading-3{
+    font-size: 24px;
+    font-weight: 400;
+}
+.heading-4{
+    font-size: 20px;
+    font-weight: 300;
+}
+.heading-5{
+    font-size: 18px;
+    font-weight: 200;
+}
+.heading-6{
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.color-red{ color: var(--red);}
+.color-blue{ color: var(--blue);}
+.color-yellow{ color: var(--yellow);}
+.color-green{ color: var(--green);}
+.color-orange{ color: var(--orange);}
+
+.p0{padding: 0;}
+.p1{padding: 1px;}
+.p2{padding: 2px;}
+.p3{padding: 3px;}
+.p4{padding: 4px;}
+
+.m0{margin: 0;}
+.m1{margin: 1px;}
+.m2{margin: 2px;}
+.m3{margin: 3px;}
+.m4{margin: 4px;}

@@ -1,0 +1,12 @@
+.kutu{
+    width: 100px;
+    height: 100px;
+    font-size: 24px;
+    font-weight: bold;
+    color:white;
+    background-color: black;
+}
+
+/* .container > .main > #content12:nth-child(odd){
+    color:red;
+} */
