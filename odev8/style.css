@@ -1,0 +1,54 @@
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    margin: 10px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.square1{
+    color: aliceblue;
+    width: 180px;
+    height: 180px;
+    font-size:xx-large;
+    font-weight: bolder;
+    font-family:'Times New Roman', Times, serif ;
+    background-color: #000000;
+    margin-top:-210px;
+    margin-left: 20px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#btn1
+{
+    margin-left: 10px;
+}
+
+button{
+    background-color: bisque;
+    border-radius: 20%;
+    float:left;
+    margin-top: -auto;
+}
+
+
+
+#randomSquare2{
+    color: aliceblue;
+    width: 170px;
+    height: 45px;
+    background-color: #817878;
+    margin-top: -25px; 
+    margin-left: 25px;
+    border-radius: 5px 5px 0 0;
+    z-index: 3;
+}
+
+#yazi{
+    color:#fffcfc;
+}
