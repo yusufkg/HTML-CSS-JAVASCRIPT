@@ -22,7 +22,11 @@
     justify-content: center;
     align-items: center;
 }
-
+.square1 p{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
 
 #btn1
 {

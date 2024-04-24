@@ -8,8 +8,9 @@ window.onload = function() {
 
 function yaziyiKaldır() {
   var mesajDiv = document.getElementById("odev8");
-
-  mesajDiv.parentNode.removeChild(mesajDiv);
+  mesajDiv.innerHTML = "";
+  document.getElementById("basilan").innerText = "";
+  //mesajDiv.parentNode.removeChild(mesajDiv);
 }
 
 // Belirli bir süre sonra yazıyı kaldır
@@ -19,51 +20,82 @@ setTimeout(yaziyiKaldır, 3000); // 3000 milisaniye (3 saniye)
 
 //Görev2
 
-
-
 document.getElementById("a").addEventListener("click", function() {
 
   document.getElementById("basilan").innerText = "Önce Açınız";
+  setTimeout(yaziyiKaldır, 3000);
 });
-
 
 
 document.getElementById("n").addEventListener("click", function() {
 
   document.getElementById("basilan").innerText = "Önce Açınız";
+  setTimeout(yaziyiKaldır, 3000);
 });
-
 
 
 document.getElementById("k").addEventListener("click", function() {
 
   document.getElementById("basilan").innerText = "Önce Açınız";
+  setTimeout(yaziyiKaldır, 3000);
 });
 
 
 document.getElementById("bir").addEventListener("click", function() {
 
   document.getElementById("basilan").innerText = "Önce Açınız";
+  setTimeout(yaziyiKaldır, 3000);
 });
 
 
 document.getElementById("altı").addEventListener("click", function() {
 
   document.getElementById("basilan").innerText = "Önce Açınız";
+  setTimeout(yaziyiKaldır, 3000);
 });
 
 
+// bool = false;
 
+// document.getElementById("btn1").addEventListener("click", function() {
+//   var text = document.getElementById("ac");
+//   bool;
+//   if (text.textContent === "Açıldı") {
+//       bool==true;
+//       text.textContent = "Kapandı";
+//       setTimeout(function() {
+//         text.textContent = "";
+//       }, 3000);
+//   } 
+  
+//   else {
+//       text.textContent = "Açıldı";
+//       setTimeout(function() {
+//         text.textContent = "";
+//       }, 3000);
+//   }
+// });
+
+
+var bool = false; // Değişkeni başlangıçta false olarak tanımla
 
 document.getElementById("btn1").addEventListener("click", function() {
   var text = document.getElementById("ac");
+  
   if (text.textContent === "Açıldı") {
-      text.textContent = "Kapandı";
+    bool = true; // bool değişkenine true değerini ata
+    text.textContent = "Kapandı";
+    setTimeout(function() {
+      text.textContent = "";
+    }, 3000);
   } else {
-      text.textContent = "Açıldı";
+    bool = false; // bool değişkenine false değerini ata
+    text.textContent = "Açıldı";
+    setTimeout(function() {
+      text.textContent = "";
+    }, 3000);
   }
 });
-
 
 
   document.getElementById("btn1").addEventListener("click", function() {
@@ -73,23 +105,74 @@ document.getElementById("btn1").addEventListener("click", function() {
 
 
 //Görev3
+document.getElementById("btn1").addEventListener("click", function() {
+  var text = document.getElementById("ac");
+  if (text.textContent === "Açıldı") {
 
 document.getElementById("a").addEventListener("click", function() {
   document.getElementById("ac").innerText = "A";
+  document.getElementById("randomSquare1").style.backgroundColor = "red"; 
+  setTimeout(function() {
+    document.getElementById("randomSquare1").style.backgroundColor = "black"; 
+    text.textContent = "";
+  }, 3000);
 });
 
 document.getElementById("n").addEventListener("click", function() {
   document.getElementById("ac").innerText = "N";
+  setTimeout(yaziyiKaldır, 3000);
 });
 
 document.getElementById("k").addEventListener("click", function() {
   document.getElementById("ac").innerText = "K";
+  setTimeout(yaziyiKaldır, 3000);
 });
 
 document.getElementById("bir").addEventListener("click", function() {
   document.getElementById("ac").innerText = "1";
+  setTimeout(yaziyiKaldır, 3000);
 });
 
 document.getElementById("altı").addEventListener("click", function() {
   document.getElementById("ac").innerText = "6";
+  setTimeout(yaziyiKaldır, 3000);
+});
+  }
+
+});
+
+
+document.getElementById("btn1").addEventListener("click", function() {
+  var text = document.getElementById("ac");
+  if (text.textContent === "Kapandı") {
+
+document.getElementById("a").addEventListener("click", function() {
+  document.getElementById("ac").innerText = "Önce Açınız";
+  setTimeout(yaziyiKaldır, 3000);
+  document.getElementById("randomSquare1").style.backgroundColor = "black";
+});
+
+
+document.getElementById("n").addEventListener("click", function() {
+  document.getElementById("ac").innerText = "Önce Açınız";
+  setTimeout(yaziyiKaldır, 3000);
+});
+
+document.getElementById("k").addEventListener("click", function() {
+  document.getElementById("ac").innerText = "Önce Açınız";
+  setTimeout(yaziyiKaldır, 3000);
+});
+
+document.getElementById("bir").addEventListener("click", function() {
+  document.getElementById("ac").innerText = "Önce Açınız";
+  setTimeout(yaziyiKaldır, 3000);
+});
+
+document.getElementById("altı").addEventListener("click", function() {
+  document.getElementById("ac").innerText = "Önce Açınız";
+  setTimeout(yaziyiKaldır, 3000);
+});
+
+  }
+
 });
