@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: #2d2929;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #6f6e6e;
+    height: 50px;
+    width: 1000px;
+    padding-top: 25px;
+
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration:none;
+    font-weight: bold;
+    font-size: large;
+}
+
+nav ul :hover{
+    text-decoration:none;
+    font-weight: bold;
+    font-size: large;
+    background-color: rgb(58, 56, 55);
+    border-radius: 50%;
+}
+
+nav ul li a:active{
+    text-decoration:none;
+    font-weight: bold;
+    font-size: large;
+    background-color: rgb(93, 74, 64);
+    border-radius: 50%;
+}
+
+hr {
+    border: 0; /* Kenarlık olmadan */
+    height: 1px; /* Yükseklik */
+    background-color: #dfdcdc; /* Çizgi rengi */
+    margin: 20px 0; /* Üst ve alt boşluk */
+    box-shadow: 5px 2px 5px;
+  }
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+#sonuc {
+    margin-top: 10px;
+}
+
