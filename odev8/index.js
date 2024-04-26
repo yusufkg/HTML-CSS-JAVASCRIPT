@@ -56,22 +56,9 @@ document.getElementById("altı").addEventListener("click", function() {
 
 var bool = false; // Değişkeni başlangıçta false olarak tanımla
 
-// function tiklandi() {
-//   var text = document.getElementById("ac");
-//   if (text.textContent === "Açıldı") {
-//       bool = true; // bool değişkenine true değerini ata
-//       text.textContent = "Kapandı";
-//   } else {
-//       bool = false; // bool değişkenine false değerini ata
-//       text.textContent = "Açıldı";
-//   }
-// }  
-
-
-
 function tiklandi() {
   var text = document.getElementById("ac");
-  if (bool==false) {
+  if (text.textContent === "Açıldı") {
       bool = true; // bool değişkenine true değerini ata
       text.textContent = "Kapandı";
   } else {
@@ -79,6 +66,19 @@ function tiklandi() {
       text.textContent = "Açıldı";
   }
 }  
+
+
+
+// function tiklandi() {
+//   var text = document.getElementById("ac");
+//   if (bool==false) {
+//       bool = true; // bool değişkenine true değerini ata
+//       text.textContent = "Kapandı";
+//   } else {
+//       bool = false; // bool değişkenine false değerini ata
+//       text.textContent = "Açıldı";
+//   }
+// }  
 
 
 

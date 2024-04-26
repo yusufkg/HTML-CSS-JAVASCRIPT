@@ -1,40 +1,47 @@
+
 document.addEventListener("DOMContentLoaded", function() {
-  // Kareleri oluştur
   const kareSayisi = 9; // Karelerin sayısını belirt
-  for (let i = 1; i <= kareSayisi; i++) {
+  const kareler = []; // Kareleri saklamak için dizi oluştur
+  let index = 1; // Rakamları 1'den başlat
+  let kediIndex; // Kedinin bulunduğu kareyi takip etmek için indis
+
+  // Kareleri oluştur ve diziye ekle
+  for (let i = 0; i < kareSayisi; i++) {
     let kare = document.createElement("div");
     kare.classList.add("kare");
-    kare.textContent = i;
     document.body.appendChild(kare);
+    kareler.push({ element: kare, ziyaretEdildi: false });
   }
 
-  // Kedi ziyaretlerini yönet
-  function kediZiyareti() {
-    // Tüm kareleri temizle
-    let kareler = document.querySelectorAll(".kare");
-    kareler.forEach(function(kare) {
-      kare.classList.remove("secili");
+  // Kediye rastgele bir kare seç
+  kediIndex = Math.floor(Math.random() * kareSayisi);
+  kareler[kediIndex].element.innerHTML = "<span>🐱</span>";
+  kareler[kediIndex].ziyaretEdildi = true;
+
+  // 1 saniye sonra kedinin ziyaret ettiği kareyi numaralandır ve kediye yeni kare seç
+  let yazilanRakam = setInterval(function() {
+    // Eğer son kareyi ziyaret ettikse işlemi durdur
+    if (index > kareSayisi) {
+      clearInterval(yazilanRakam);
+      return;
+    }
+
+    // Kedinin bulunduğu kareyi numaralandır
+    kareler[kediIndex].element.textContent = index;
+
+    // Rastgele bir kare seç
+    let bosKareler = kareler.filter(function(kare) {
+      return !kare.ziyaretEdildi;
     });
+    let secilenIndex = Math.floor(Math.random() * bosKareler.length);
+    let secilenKare = bosKareler[secilenIndex];
 
-    // Rastgele bir kareyi seç
-    let randomIndex = Math.floor(Math.random() * kareler.length);
-    let secilenKare = kareler[randomIndex];
-    secilenKare.classList.add("secili");
+    // Kediye yeni kare seç ve ziyaret edildi olarak işaretle
+    kediIndex = kareler.indexOf(secilenKare);
+    secilenKare.element.innerHTML = "<span>🐱</span>";
+    secilenKare.ziyaretEdildi = true;
 
-    // Ziyaret edilen kareyi numaralandır
-    secilenKare.textContent = "+";
-
-    // Bir sonraki ziyaret için zamanlayıcıyı ayarla
-    setTimeout(function() {
-      kareler.forEach(function(kare) {
-        let numara = parseInt(kare.textContent);
-        kare.textContent = numara + 1;
-      });
-      kediZiyareti();
-    }, 1000);
-  }
-
-  // İlk kedi ziyareti için zamanlayıcıyı ayarla
-  setTimeout(kediZiyareti, 1000);
+    // Sonraki rakama geç
+    index++;
+  }, 1000);
 });
-
