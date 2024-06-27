@@ -1,0 +1,68 @@
+
+nav{
+    background-color: rgb(223, 223, 223);
+    color: rgb(73, 72, 72);
+    text-align: center;
+    font-size: 40px;
+    z-index: 1000; 
+}
+
+hr{
+    height: 2px;
+    background-color: aquamarine;
+}
+
+.menu{
+    margin-top: -25px;
+    margin-left: -1250px;
+    
+}
+
+.menu-item{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin-left: 25px;
+    
+}
+
+.menu-item:hover{
+    color: aquamarine;
+}
+
+article{
+    float: left;
+    width: 1200px;
+}
+ul{
+    margin-left: -35px;
+}
+ul:hover{
+    box-shadow: 0 0 2px 5px;
+}
+
+li{
+    list-style-type: none; 
+    border: 1px solid #ccc;
+    color: black;
+}
+h1{
+    margin-left: 20px;
+}
+p{
+    margin-left: 20px;
+}
+
+aside{
+    width: 450px;
+    height: 550px;
+    border: 3px solid aqua;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+}
+
+aside div{
+    text-align: center;
+}
